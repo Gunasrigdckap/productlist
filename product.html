@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<body>
+    <div class="mainContainer">
+        <h1>Our products</h1>
+        <hr>
+    <div class="container">
+
+        <input type="text" id="search" placeholder="search here...">
+        <div class="imgsdiv1">
+            <div class="img1"><img src="product-1.jpeg" alt="ProductImg1">
+                <p class="imgName">High-Back-Bench</p>
+                <p class="num">$9.99</p></div>
+            <div class="img1"><img src="product-2.jpeg" alt="ProductImg2">
+                <p class="imgName">Albany Table</p>
+                <p class="num">$79.99</p></div>
+            <div class="img1"><img src="product-3.jpeg" alt="ProductImg3">
+                <p class="imgName">Accent Chair</p>
+                <p class="num">$25.99</p>
+            </div>
+        </div>
+        <div class="imgsdiv2">
+            <div class="img1"><img src="product-4.jpeg" alt="ProductImg4">
+                <p class="imgName">Wooden Table</p>
+                <p class="num">$45.99</p>
+            </div>
+            <div class="img1"><img src="product-5.jpeg" alt="ProductImg5">
+                <p class="imgName">Dining Table</p>
+                <p class="num">$6.99</p>
+            </div>
+            <div class="img1"><img src="product-6.jpeg" alt="ProductImg6">
+                <p class="imgName">Sofa Set</p>
+                <p class="num">$69.99</p>
+            </div>
+        </div>
+        <div class="imgsdiv3">
+            <div class="img1"><img src="product-7.jpeg" alt="ProductImg7">
+                <p class="imgName">Modern BookShelf</p>
+                <p class="num">$10.99</p>
+            </div>
+            <div class="img1"><img src="product-8.jpeg" alt="ProductImg8">
+                <p class="imgName">Emperor Bed</p>
+                <p class="num">$4.99</p>
+            </div>
+            <div class="img1"><img src="product-9.jpeg" alt="ProductImg9">
+                <p class="imgName">Utopia Sofa</p>
+                <p class="num">$13.99</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="product.js"></script>
+    <script>
+        let imgName = document.querySelectorAll(".imgName");
+        let search = document.getElementById("search")
+
+        console.log("imagee="+imgName);
+        console.log("search="+search);
+
+        
+
+
+
+      search.addEventListener("keyup",()=>{
+
+        for(var i=0;i<=imgName.length-1;i++){
+
+   
+            var search_input =search.value.toLowerCase();
+            console.log("img name"+imgName[0].innerHTML.toLowerCase());
+            var search2= imgName[i].innerText.toLowerCase();
+
+           
+            if(search2.indexOf(search_input) != -1){
+                imgName[i].parentElement.style.display="block"
+            }
+           
+            else{
+                imgName[i].parentElement.style.display="none";
+            }
+
+        }
+
+         })
+
+
+
+    </script>
+</body>
+</html>
+
+
+<!-- else if(search2.indexOf(search_input)!=search.value){
+    console.log("No Word Matched");
+} -->

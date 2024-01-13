@@ -1,0 +1,56 @@
+body{
+    max-width: 1440px;
+    width: 100%;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+    /* background-color: rgb(127, 157, 255); */
+   
+}
+.mainContainer{
+    margin: 40px;
+    /* background-color: rgb(255, 255, 255); */
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 75px;
+}
+h1{
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+hr{
+    
+    width: 94px;
+    position: relative;
+    top: 6px;
+    height: 2px;
+    background-color: rgb(0, 47, 112);
+    font-size: xx-large;
+}
+.imgsdiv1,.imgsdiv2,.imgsdiv3{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+img{
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.img1 {
+    text-align: center;
+}
+
+#search{
+    width: 200px;
+    position: relative;
+    bottom: 30px;
+}
+
+/* .dis_none{
+    display: none;
+} */
